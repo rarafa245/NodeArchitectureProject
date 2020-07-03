@@ -1,5 +1,7 @@
 const Postagens = require('./Postagens')
+const Usuarios = require('./usuarios')
 
 module.exports = {
-  Postagens: Postagens
+  Postagens: Postagens,
+  Usuarios: Usuarios
 }

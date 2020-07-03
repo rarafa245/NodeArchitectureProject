@@ -7,7 +7,14 @@ const Postagens = db.define('postagens', {
   },
   conteudo: {
     type: Sequelize.TEXT
-  }
+  },
+  usuario_id: {
+    type: Sequelize.INTEGER,
+    references: {
+      model: 'usuarios',
+      key: 'usuario_id'
+      }
+  },
 })
 
 module.exports = Postagens
