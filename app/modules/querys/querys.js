@@ -1,8 +1,12 @@
 const tables = require('../tables')
 
 async function queryAll() {
-  const elements = await tables.Postagens.findAll();
-  console.log(elements[0].dataValues)
+  let results = []
+
+  const elements = await tables.Postagens.findAll()
+    .then((data) => data.forEach( item => results.push(item.dataValues) ))
+
+  console.log(results)
 }
 
 module.exports = queryAll
